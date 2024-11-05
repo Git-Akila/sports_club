@@ -10,7 +10,7 @@ import { useStateValue } from "../../services/StateProvider";
 import Sidebar from "../../components/Sidebar";
 import Loading from "../../components/Loading";
 import WizardForm from "../../components/form/Forms/ReduxWizard/WizardForm";
-
+import eventsasset from "../../assets/eventsasset.webp";
 const Dashboard = () => {
   const [{ isSidebarOpen }, dispatch] = useStateValue();
   const [hasAPINotResponded, setAPIStatus] = useState(true);
@@ -40,45 +40,52 @@ const Dashboard = () => {
       <Navbar toggle={()=>dispatch({type :'TOGGLE_SIDEBAR'})}/> */}
       {/* <HeroSection /> */}
       <section id="events" className="container">
-        <section class=" bg-gray-100 sm:py-16 mb-5 ">
-          <h2 class=" text-3xl pl-10 font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
-            All Events
-          </h2>
+        <section
+          className="relative bg-gray-100 sm:py-16 mb-5 h-64 bg-cover bg-center"
+          style={{ backgroundImage: `url(${eventsasset})` }}
+        >
+          <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
+          {/* Dark overlay for text readability */}
+          <div className="relative flex justify-center items-center h-full">
+            <h2 className="text-3xl font-bold text-gray-200 sm:text-4xl lg:text-5xl">
+              All Events
+            </h2>
+          </div>
         </section>
         <div className="bg-gray-100 sm:py-16 p-5  text-black ">
-        
-   
-        <p className="events__filter">Filter:</p>
-        <select
-          name="event"
-          id="event"
-          className="custom-select sources"
-          onChange={(e) => {
-            filterEvents(e.target.value);
-          }}
-        >
-          <option className="custom-option" value={""}>
-            All Events
-          </option>
-          <option className="custom-option" value="running">
-            Vollyball
-          </option>
-          <option className="custom-option" value="cycling">
-            Football
-          </option>
-          <option className="custom-option" value="swimming">
-            kabaddi
-          </option>
-          <option className="custom-option" value="other">
-            Others
-          </option>
-        </select>
-        {hasAPINotResponded && <Loading message={"Fetching all the events"} />}
-        <div className="cards-wrapper">
-          {events.map((event) => (
-            <Event {...event} />
-          ))}
-        </div>
+          <p className="events__filter">Filter:</p>
+          <select
+            name="event"
+            id="event"
+            className="custom-select sources"
+            onChange={(e) => {
+              filterEvents(e.target.value);
+            }}
+          >
+            <option className="custom-option" value={""}>
+              All Events
+            </option>
+            <option className="custom-option" value="running">
+              Vollyball
+            </option>
+            <option className="custom-option" value="cycling">
+              Football
+            </option>
+            <option className="custom-option" value="swimming">
+              kabaddi
+            </option>
+            <option className="custom-option" value="other">
+              Others
+            </option>
+          </select>
+          {hasAPINotResponded && (
+            <Loading message={"Fetching all the events"} />
+          )}
+          <div className="cards-wrapper">
+            {events.map((event) => (
+              <Event {...event} />
+            ))}
+          </div>
         </div>
       </section>
       {/* <Footer /> */}

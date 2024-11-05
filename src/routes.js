@@ -10,6 +10,8 @@ import EventInfo from "./pages/EventInfo";
 import { UserSubscriptionsInfo } from "./pages/UserSubscriptions/UserSubscriptionsInfo";
 import { UserEventInfo } from "./pages/UserEvents/UserEventsInfo";
 import UserEventsHandler from './components/UserEventsHandler';
+import PrivateRoute from "./PrivateRoute";
+
 export const Routes = () => {
   return (
     <BrowserRouter>
@@ -18,7 +20,8 @@ export const Routes = () => {
         <Route path="/login" exact component={Login} />
         <Route path="/register" exact component={Register} />
         <Route path="/profile" exact component={Profile} />
-        <Route path="/dashboard" component={Dashboard} />
+        {/* <Route path="/dashboard" component={Dashboard} /> */}
+        <PrivateRoute path="/dashboard" component={Dashboard} />
         <Route path="/event/:id" exact component={EventInfo} />
         <Route path="/events" component={EventsPage} />
         <Route path="/user/events" render={()=>(<UserEventsHandler {...UserEventInfo}/>)}/>

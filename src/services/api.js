@@ -6,7 +6,7 @@ const api = axios.create({
     //baseURL: 'https://api-fitclub.herokuapp.com'
     // Development
     // baseURL : "http://localhost:8080"
-    baseURL:"http://192.168.0.116:8080/"
+    baseURL:"http://192.168.0.121:8080/"
 })
 
 export default api;
