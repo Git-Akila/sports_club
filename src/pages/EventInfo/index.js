@@ -212,13 +212,13 @@ const EventInfo = ({ history }) => {
           //   </div>
           // </div>
         )}
-        {isModalOpen && (
+        {/* {isModalOpen && (
           <Modal
             isOpen={isModalOpen}
             onClose={closeModal}
             title="Modal Title"
           ></Modal>
-        )}
+        )} */}
       </section>
       <Footer />
     </>
