@@ -25,7 +25,7 @@ const quote = () => {
                 Waiting for an oppurtunity?
               </p>
               <a
-                href="#"
+                href="/login"
                 title=""
                 class="inline-flex items-center justify-center px-8 py-4 mt-4 text-base font-semibold text-white transition-all duration-200 bg-black rounded-md hover:opacity-80 focus:opacity-80"
                 role="button"

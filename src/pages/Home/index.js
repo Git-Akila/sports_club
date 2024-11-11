@@ -36,6 +36,7 @@ import Sidebar from "../../components/Sidebar";
 import { useStateValue } from "../../services/StateProvider";
 import "./Home.css";
 import Countdown from "../../components/countdown";
+import ScrollToTopButton from '../../components/ScrollTop/ScrollTop'
 
 const Home = () => {
   const [{ isSidebarOpen }, dispatch] = useStateValue();
@@ -52,6 +53,10 @@ const Home = () => {
 
         {/* <Features />
          */}
+
+<section id="feature">
+            <Features/>
+          </section>
 
         <Process />
 
@@ -88,16 +93,21 @@ const Home = () => {
         </section> */}
         {/* <Gamecategory /> */}
         <Countdown />
-
+          
+        <section id="pricing">
         <Pricing />
+      </section>
 
         <Partners />
         <Blog />
         {/* <Contactus/> */}
         {/* <Testimonials /> */}
+        <section id="contact"> 
         <Enduser />
+        </section>
         <Newsletter />
       </main>
+      <ScrollToTopButton/>
       <Footer />
     </>
   );

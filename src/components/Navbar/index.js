@@ -24,12 +24,12 @@ const Navbar = () => {
           {/* Desktop Links */}
           <div className="hidden lg:flex lg:items-center lg:space-x-10">
             <a
-              href="#"
+              href="#feature"
               className="text-base font-medium text-white hover:text-blue-600"
             >
               Features
             </a>
-            <a
+            {/* <a
               href="#"
               className="text-base font-medium text-white hover:text-blue-600"
             >
@@ -40,28 +40,34 @@ const Navbar = () => {
               className="text-base font-medium text-white hover:text-blue-600"
             >
               Resources
-            </a>
+            </a> */}
             <a
-              href="#"
+              href="#pricing"
               className="text-base font-medium text-white hover:text-blue-600"
             >
               Pricing
             </a>
+            <a
+              href="#contact"
+              className="text-base font-medium text-white hover:text-blue-600"
+            >
+              Contact
+            </a>
           </div>
           <div className="gap-4 flex justify-center items-center">
             {/* Desktop Button */}
-            <a
-              href="#"
+            {/* <a
+              href="/login"
               className="hidden lg:inline-flex items-center p-2 text-base font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700"
             >
               Get started now
-            </a>
+            </a> */}
             <a
               
               onClick={() => {
                 localStorage.removeItem('token'); 
                 window.location.href = '/login'; }}
-              className="hidden lg:inline-flex items-center p-2 text-base font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700"
+              className="hidden lg:inline-flex items-center p-2 text-base font-semibold text-white bg-[#1E90FF] rounded-md hover:bg-blue-700"
             >
               Logout
             </a>
@@ -107,7 +113,7 @@ const Navbar = () => {
             </div>
             <div className="px-6 mt-6">
               <a
-                href="#"
+                href="/dashboard"
                 className="flex justify-center px-4 py-3 text-base font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700"
               >
                 Get started now
