@@ -87,33 +87,33 @@ const Navbar = () => {
           <nav className="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
             <div className="flex flex-col px-6 space-y-1">
               <a
-                href="#"
+                href="#features"
                 className="py-2 text-base font-medium text-black hover:text-blue-600"
               >
                 Features
               </a>
               <a
-                href="#"
-                className="py-2 text-base font-medium text-black hover:text-blue-600"
-              >
-                Solutions
-              </a>
-              <a
-                href="#"
-                className="py-2 text-base font-medium text-black hover:text-blue-600"
-              >
-                Resources
-              </a>
-              <a
-                href="#"
+                href="#pricing"
                 className="py-2 text-base font-medium text-black hover:text-blue-600"
               >
                 Pricing
               </a>
+              <a
+                href="#contact"
+                className="py-2 text-base font-medium text-black hover:text-blue-600"
+              >
+                Contact
+              </a>
+              {/* <a
+                href="#"
+                className="py-2 text-base font-medium text-black hover:text-blue-600"
+              >
+                Pricing
+              </a> */}
             </div>
             <div className="px-6 mt-6">
               <a
-                href="/dashboard"
+                href="/login"
                 className="flex justify-center px-4 py-3 text-base font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700"
               >
                 Get started now
